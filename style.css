@@ -177,7 +177,7 @@
         position: absolute;
         text-align: center;
         top: 251px;
-        left: 330px;
+        right: -30px;
         width: 60%;
         transform: rotate(15deg);
     }
