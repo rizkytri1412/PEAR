@@ -196,10 +196,11 @@ color: white !important;
 display: block;
 width: 200px;
 height: 50px;
-background: #00897B;
+background: #3269ff;
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
+font-weight: bold;
 font: 17px/50px Helvetica, Verdana, sans-serif;
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&amp;amp;#39;#00b7ea&amp;amp;#39;, endColorstr=&amp;amp;#39;#009ec3&amp;amp;#39;,GradientType=0 );
 }
