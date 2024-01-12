@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Channel YouTube Saya</title>
     <style>
@@ -20,14 +19,17 @@
 </head>
 <body>
 
-    <h1>Selamat Datang</h1>
+    <h1>Selamat datang di Channel YouTube Saya!</h1>
 
-    <p>Silahkan klik tombol subscribe untuk menyaksikan video seleksi kurasi UMKM</p>
+    <p>Terimakasih sudah mengunjungi channel saya. Jangan lupa untuk subscribe!</p>
 
     <!-- Ganti 'YOUR_CHANNEL_ID' dengan ID channel YouTube Anda -->
     <div class="g-ytsubscribe" data-channelid="UCNwSHww94JvOKi8ZAO-shZw" data-layout="default" data-count="default"></div>
 
     <button class="subscribe-button" onclick="showSubscribePopup()">Subscribe</button>
+
+    <!-- Ganti 'YOUR_VIDEO_ID' dengan ID video YouTube Anda -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GPiS42nG-TI?list=PLxtj0Fzm7DkhQlXlBXVot_xbqjdcn8N_k&autoplay=1" frameborder="0" allowfullscreen></iframe>
 
     <script src="https://apis.google.com/js/platform.js"></script>
     <script>
@@ -44,10 +46,6 @@
             var checkPopupClosed = setInterval(function() {
                 if (subscribePopup.closed) {
                     clearInterval(checkPopupClosed);
-
-                    // Ganti 'YOUR_VIDEO_URL' dengan URL video yang ingin Anda arahkan setelah subscribe
-                    var videoURL = 'https://youtu.be/GPiS42nG-TI?list=PLxtj0Fzm7DkhQlXlBXVot_xbqjdcn8N_k';
-                    window.location.href = videoURL;
                 }
             }, 500);
         }
