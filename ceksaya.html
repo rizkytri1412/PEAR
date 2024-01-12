@@ -28,9 +28,6 @@
 
     <button class="subscribe-button" onclick="showSubscribePopup()">Subscribe</button>
 
-    <!-- Ganti 'YOUR_VIDEO_ID' dengan ID video YouTube Anda -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GPiS42nG-TI?list=PLxtj0Fzm7DkhQlXlBXVot_xbqjdcn8N_k&autoplay=1" frameborder="0" allowfullscreen></iframe>
-
     <script src="https://apis.google.com/js/platform.js"></script>
     <script>
         function showSubscribePopup() {
@@ -46,6 +43,10 @@
             var checkPopupClosed = setInterval(function() {
                 if (subscribePopup.closed) {
                     clearInterval(checkPopupClosed);
+
+                    // Ganti 'YOUR_VIDEO_URL' dengan URL video yang ingin Anda arahkan setelah subscribe
+                    var videoURL = 'https://youtu.be/GPiS42nG-TI?list=PLxtj0Fzm7DkhQlXlBXVot_xbqjdcn8N_k';
+                    window.location.href = videoURL;
                 }
             }, 500);
         }
