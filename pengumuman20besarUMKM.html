@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel YouTube Saya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .subscribe-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Selamat Datang</h1>
+
+    <p>Silahkan klik tombol subscribe untuk menyaksikan video seleksi kurasi UMKM</p>
+
+    <!-- Ganti 'YOUR_CHANNEL_ID' dengan ID channel YouTube Anda -->
+    <div class="g-ytsubscribe" data-channelid="UC34ntAmrh79l1OptcqvHSxg" data-layout="default" data-count="default"></div>
+
+    <button class="subscribe-button" onclick="showSubscribePopup()">Subscribe</button>
+
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script>
+        function showSubscribePopup() {
+            // Ganti 'YOUR_CHANNEL_ID' dengan ID channel YouTube Anda
+            var channelID = 'UC34ntAmrh79l1OptcqvHSxg';
+            // URL untuk menampilkan pop-up langganan
+            var subscribeURL = 'https://www.youtube.com/channel/' + channelID + '?sub_confirmation=1';
+            
+            // Buka pop-up subscribe saat tombol ditekan
+            var subscribePopup = window.open(subscribeURL, '_blank');
+
+            // Tambahkan event listener untuk mendeteksi perubahan URL pop-up
+            var checkPopupClosed = setInterval(function() {
+                if (subscribePopup.closed) {
+                    clearInterval(checkPopupClosed);
+
+                    // Ganti 'YOUR_VIDEO_URL' dengan URL video yang ingin Anda arahkan setelah subscribe
+                    var videoURL = 'https://youtu.be/yd2jGGC0gb4';
+                    window.location.href = videoURL;
+                }
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
